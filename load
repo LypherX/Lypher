@@ -1,3 +1,12 @@
+LoadingScreen = true
+LoadingText1 = "Loading Library"
+LoadingText2 = "Updating Library"
+LoadingText3 = "Getting Script"
+LoadingText4 = "Executing Script"
+LoadingText5 = "Please Execute Again"
+
+local ScriptTitle = ""
+
 -- LOADING SCREEN
 if LoadingScreen ~= false then
     local Loading = Instance.new("ScreenGui")
@@ -23,7 +32,7 @@ if LoadingScreen ~= false then
     local Percentage = Instance.new("TextLabel")
     local Tip = Instance.new("TextLabel")
     local EndSequence = Instance.new("Frame")
-    Loading.Name = "Mori"
+    Loading.Name = "Egorikusa"
     Loading.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     Loading.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     Loading.DisplayOrder = 999999999
@@ -199,3 +208,10 @@ if LoadingScreen ~= false then
         game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
         game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
     end
+    coroutine.wrap(LSNGUH_fake_script)()
+end
+
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
