@@ -5,7 +5,7 @@ LoadingText3 = "Getting Script"
 LoadingText4 = "Executing Script"
 LoadingText5 = "Please Execute Again"
 
-local ScriptTitle = ""
+local ScriptTitle = ".gg/moriscripts"
 
 -- LOADING SCREEN
 if LoadingScreen ~= false then
